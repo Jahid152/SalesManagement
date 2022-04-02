@@ -97,6 +97,16 @@ if($_POST){
 					    	<input type="password" class="form-control" id="inputPassword3" name="password" placeholder="Password">
 					    </div>
 					</div>
+					<div class="form-group row">					    
+					    <div class="col-sm-10">
+					    	<div class="form-check">
+						        <input class="form-check-input" type="checkbox" id="gridCheck1">
+						        <label class="form-check-label" for="gridCheck1">
+						          Remember me?
+						        </label>
+					    	</div>
+					    </div>
+					</div>
 					<div class="form-group row">
 					    <div class="col-sm-10">
 					    	<button type="submit" class="btn btn-primary">Sign in</button>
