@@ -58,7 +58,22 @@ if($_POST){
 </head>
 <body>
 	<div class="container">
-		
+		<div class="row justify-content-md-center align-items-center"  style="height:100vh;">
+		    <div class="col col-lg-2"></div>
+		    <div class="col-md-auto border border-primary rounded" style="padding:15px; background-color: white; border: 2px solid gray !important; border-radius: 5px;">
+		    	<div class="panel-heading" style="padding-top: 10px">
+		    		<br><hr>
+					<h6 class="panel-title">Sign in</h6>
+				</div>
+				<div class="messages">
+					<?php if($errors) {
+						foreach ($errors as $key => $value) {
+							echo '<div class="alert alert-warning" role="alert">
+							'.$value.'</div>';										
+							}
+						}
+					?>
+				</div>
 </div>
 <?php
 require_once 'footer.php';
