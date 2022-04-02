@@ -74,6 +74,22 @@ if($_POST){
 						}
 					?>
 				</div>
+				<style>
+					.col-sm-9 {
+					    -ms-flex: 0 0 100% !important;
+					    flex: 0 0 100% !important;
+					    max-width: 100% !important;
+					}
+					.btn-primary {
+					    color: #fff;
+					    background-color: #4CAF50;
+					    border-color: #4CAF50;
+					}
+				</style>
+		    </div>
+		    <div class="col col-lg-2"></div>
+	    </div>				
+	</div>
 </div>
 <?php
 require_once 'footer.php';
