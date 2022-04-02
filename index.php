@@ -86,6 +86,23 @@ if($_POST){
 					    border-color: #4CAF50;
 					}
 				</style>
+				<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" style="margin-top: 20px; width: 300px">
+					<div class="form-group row">
+				    	<div class="col-sm-9">
+				    		<input type="text" class="form-control" id="inputUsername" name="username" placeholder="Username">
+				    	</div>
+				    </div>
+					<div class="form-group row">
+					    <div class="col-sm-9">
+					    	<input type="password" class="form-control" id="inputPassword3" name="password" placeholder="Password">
+					    </div>
+					</div>
+					<div class="form-group row">
+					    <div class="col-sm-10">
+					    	<button type="submit" class="btn btn-primary">Sign in</button>
+					    </div>
+					</div>
+				</form>
 		    </div>
 		    <div class="col col-lg-2"></div>
 	    </div>				
