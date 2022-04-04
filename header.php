@@ -28,6 +28,16 @@ require_once'connection.php';
 	    	<li class="nav-item">
 		        <a class="nav-link" href="category.php"><i class="fa fa-tasks"></i> Category</a>
 		    </li>
+		    <li class="nav-item">
+		        <a class="nav-link" href="product.php"><i class="fa fa-product-hunt"></i> Product</a>
+		    </li>
+		    <li class="nav-item dropdown" style="padding-right: 8px">
+		        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		        	<i class="fa fa-shopping-cart"></i> Order</a>
+		        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenu">
+		          <a class="dropdown-item" href="orders.php"><i class="fa fa-pencil-square-o"></i>Manage Order</a>
+		        </div>
+		    </li>
 	    </ul>
 	  </div>
 	</nav>	 
