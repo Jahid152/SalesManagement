@@ -38,6 +38,15 @@ require_once'connection.php';
 		          <a class="dropdown-item" href="orders.php"><i class="fa fa-pencil-square-o"></i>Manage Order</a>
 		        </div>
 		    </li>
+		    <li class="nav-item dropdown">
+		        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		          <i class="fa fa-user"></i> Users
+		        </a>
+		        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+		          <a class="dropdown-item" href="users.php"><i class="fa fa-wrench"></i> All Users</a>
+		          <a class="dropdown-item" href="logout.php"><i class="fa fa-sign-out"></i> Logout</a>
+		        </div>
+		    </li>
 	    </ul>
 	  </div>
 	</nav>	 
