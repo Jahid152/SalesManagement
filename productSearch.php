@@ -12,4 +12,5 @@ $stmt->execute();
 $result = $stmt->get_result();
 $outp = $result->fetch_all(MYSQLI_ASSOC);
 $connect->close();
+echo json_encode($outp);
 ?>
