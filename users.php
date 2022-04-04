@@ -66,12 +66,20 @@ require_once 'header.php';
 	<div class="modal fade" id="addProductModal" tabindex="-1" role="dialog">
 		<div class="modal-dialog">
 
-			
+			<form action="addUser.php" id="addUserForm" method="POST"  enctype="multipart/form-data">
+
+			    <div class="modal-content" id="successMessage">
+			    
+		    		<div class="modal-header">
+		    			<h5 class="title"><i class="fa fa-plus"></i> Add User</h5>
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			      	</div>
+
+				    
+			    </div>
+			</form>
 		</div>
 	</div>
 </div>
-<?php
-require_once 'footer.php';
-?>
 </body>
 </html>
