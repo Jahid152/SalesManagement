@@ -113,6 +113,12 @@ require_once 'header.php';
 							    </div>
 				        </div>  	        	        
 				    </div>
+				      
+			        <div class="modal-footer">
+				        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				        
+				        <button type="submit" class="btn btn-primary" id="createProductBtn" data-loading-text="Loading..." autocomplete="off">Save</button>
+			        </div>
 			    </div>
 			</form>
 		</div>
