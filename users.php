@@ -38,5 +38,26 @@ require_once 'header.php';
 			</div>
 		</div>
 	</div>
+
+	<script>
+		$(document).ready(function(){
+		    $.ajax({
+		        type: 'GET',
+		        url: 'getUsersData.php',
+		        dataType: 'json',
+		        success: function(data) {
+		        	$.each(data, function(key, items) {
+			            var userName = items.salesman_id;
+			            var fullName = items.salesman_name;
+			            var contactNo = items.salesman_contact;
+			            var emailAddress = items.salesman_email;
+			            
+			            $('#manageProductTable').append('<tr>' + '<td>' + userName + '</td><td>'+ fullName + '</td><td>' + contactNo + '</td><td>' + emailAddress + '</td></tr>');
+			        });
+		        }
+		    });
+		    return false;
+		});
+	</script>
 </body>
 </html>
