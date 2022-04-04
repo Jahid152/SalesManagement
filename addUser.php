@@ -14,5 +14,15 @@ if($_POST) {
 	$sql = "INSERT INTO sales_manager (salesman_id, salesman_name, salesman_contact, salesman_email, salesman_pass) 
 				VALUES ('$userName', '$userFullName', '$contactNo', '$emailAddress', '$userPassword')";
 
-	
+	if($connect->query($sql) === TRUE) {
+		$valid['success'] = true;
+		$valid['messages'] = "Successfully Added";	
+	} else {
+		$valid['success'] = false;
+		$valid['messages'] = "Error";
+	}
+
+	$connect->close();
+
+	echo json_encode($valid);
 }
