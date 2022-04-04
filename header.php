@@ -16,6 +16,10 @@ require_once'connection.php';
 	<script src="file/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
-	
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="margin-bottom: 10px; background-color: #e39d00 !important;">
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	</nav>	 
 
 	<div class="container">
