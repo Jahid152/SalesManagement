@@ -11,5 +11,8 @@ if($_POST) {
 	$emailAddress = $_POST['emailAddress'];
 	$userPassword = md5($_POST['userPassword']);
 
+	$sql = "INSERT INTO sales_manager (salesman_id, salesman_name, salesman_contact, salesman_email, salesman_pass) 
+				VALUES ('$userName', '$userFullName', '$contactNo', '$emailAddress', '$userPassword')";
+
 	
 }
