@@ -75,7 +75,44 @@ require_once 'header.php';
 				        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 			      	</div>
 
-				    
+				    <div class="modal-body" style="max-height:450px; overflow:auto;">
+				      	<div id="add-product-messages"></div>
+
+				        <div class="form-group">
+				        	<label for="productName" class="col-sm-3 control-label">Username </label>
+							    <div class="col-sm-8">
+							      <input type="varchar" class="form-control" id="userName" placeholder="Username" name="userName" autocomplete="off" required>
+							    </div>
+				        </div>
+
+				        <div class="form-group">
+				        	<label for="productName" class="col-sm-3 control-label" style="max-width: 50%;">Full Name </label>
+							    <div class="col-sm-8">
+							      <input type="varchar" class="form-control" id="userFullName" placeholder="Full Name" name="userFullName" autocomplete="off" required>
+							    </div>
+				        </div>
+
+				        <div class="form-group">
+				        	<label for="productName" class="col-sm-3 control-label" style="max-width: 50%;">Contact No. </label>
+							    <div class="col-sm-8">
+							      <input type="varchar" class="form-control" id="contactNo" placeholder="Contact No." name="contactNo" autocomplete="off" required>
+							    </div>
+				        </div>
+
+				        <div class="form-group">
+				        	<label for="productName" class="col-sm-3 control-label" style="max-width: 50%;">Email Address </label>
+							    <div class="col-sm-8">
+							      <input type="varchar" class="form-control" id="emailAddress" placeholder="Email Address" name="emailAddress" autocomplete="off" required>
+							    </div>
+				        </div>
+
+				        <div class="form-group">
+				        	<label for="productName" class="col-sm-3 control-label">Password </label>
+							    <div class="col-sm-8">
+							      <input type="varchar" class="form-control" id="userPassword" placeholder="Password" name="userPassword" autocomplete="off" required>
+							    </div>
+				        </div>  	        	        
+				    </div>
 			    </div>
 			</form>
 		</div>
