@@ -59,5 +59,19 @@ require_once 'header.php';
 		    return false;
 		});
 	</script>
+
+<!-- Adding product -->
+
+
+	<div class="modal fade" id="addProductModal" tabindex="-1" role="dialog">
+		<div class="modal-dialog">
+
+			
+		</div>
+	</div>
+</div>
+<?php
+require_once 'footer.php';
+?>
 </body>
 </html>
