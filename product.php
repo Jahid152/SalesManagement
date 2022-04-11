@@ -19,5 +19,20 @@ require_once 'header.php';
 						</button>
 					</div>	
 					
+					<div class="div-action pull pull-right" style="padding:20px;">
+						<div class="form-inline">
+						    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="productSearchKey">
+						    <button class="btn btn-outline-success my-2 my-sm-0" onclick="searchByNameLoad()">Search</button>
+						</div>
+					</div>
+
+					<!-- Product search query by Ajax -->
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
 </body>
 </html>
