@@ -180,10 +180,36 @@ require_once 'header.php';
 				        </div>		        	        
 				    </div>
 				      
-			        
+			        <div class="modal-footer">
+				        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				        
+				        <button type="submit" class="btn btn-primary" id="createProductBtn" data-loading-text="Loading..." autocomplete="off">Save</button>
+			        </div>
 			    </div>
 			</form>
-			
+			<script>
+				$(document).ready(function (e) {
+					$("#addProductForm").on('submit',(function(e) {
+						e.preventDefault();
+						$.ajax({
+				        	url: "addProductData.php",
+							type: "POST",
+							data:  new FormData(this),
+							contentType: false,
+				    	    cache: false,
+							processData:false,
+							success: function(data) {
+								document.getElementById("successMessage").innerHTML = "";					            
+					            var successMsg = "Successfully Added";						           
+					            $('#successMessage').append('<span style="padding: 10px; font-weight: bold; color: green;">'+ successMsg + '</span>');
+						    },error: function() {
+
+							} 	        
+					   });
+					}));
+				});
+
+			</script>  
 		</div>
 	</div>
 </div>
