@@ -28,11 +28,95 @@ require_once 'header.php';
 
 					<!-- Product search query by Ajax -->
 
+					<script>
+						var searchByName;
+
+						function searchByNameLoad() {
+							$(document).ready(function(){
+								jQuery('#manageProductTable').html('');
+								searchByName = document.getElementById('productSearchKey').value;
+								searchByName = searchByName.replace("'", "''");
+
+								var formData = {
+									'searchByName': searchByName
+								};
+
+							    $.ajax({
+							        type: 'POST',
+							        url: 'productSearch.php',
+							        data: formData,
+									dataType: 'json',
+							        success: function(data) {
+							        	$.each(data, function(key, items) {
+								            var productImage = items.product_image;
+								            var productId = items.product_id;
+								            var productName = items.product_name;
+								            var productQuantity = items.product_qty;
+								            var productPrice = items.product_price;
+								            var productStatus;
+								            if( items.product_status == 1)
+								            	productStatus = "Available";
+								            else
+								            	productStatus = "Not Available";
+								            $('#manageProductTable').append(
+
+								            	'<tr>' + '<td><img src="images/' + productImage + '" width="50" height="50"></td> <td>' + productId + '</td><td>'+ productName + '</td><td>'
+								            	+ productQuantity + '</td><td>' + productPrice + '</td><td>' + productStatus + '</td>' + '</tr>'
+
+								            	);
+								        });
+							        }
+							    });
+							    return false;
+							});
+						}
+					</script>
+					
+					<table class="table" id="manageProductTable">							
+						<tr>
+							<th style="width:10%;">Photo</th>						
+							<th>Product Id</th>
+							<th>Product Name</th>							
+							<th>Stock</th>
+							<th>Price (BDT)</th>
+							<th>Status</th>
+						</tr>
+
+					</table>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	
+	<script>
+		$(document).ready(function(){
+		    $.ajax({
+		        type: 'GET',
+		        url: 'getProductData.php',
+		        dataType: 'json',
+		        success: function(data) {
+		        	$.each(data, function(key, items) {
+			            var productImage = items.product_image;
+			            var productId = items.product_id;
+			            var productName = items.product_name;
+			            var productQuantity = items.product_qty;
+			            var productPrice = items.product_price;
+			            var productStatus;
+			            if( items.product_status == 1)
+			            	productStatus = "Available";
+			            else
+			            	productStatus = "Not Available";
+			            $('#manageProductTable').append(
+
+			            	'<tr>' + '<td><img src="images/' + productImage + '" width="50" height="50"></td> <td>' + productId + '</td><td>'+ productName + '</td><td>'
+			            	+ productQuantity + '</td><td>' + productPrice + '</td><td>' + productStatus + '</td>' + '</tr>'
+
+			            	);
+			        });
+		        }
+		    });
+		    return false;
+		});
+	</script>
 </body>
 </html>
