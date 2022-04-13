@@ -14,6 +14,17 @@ if($_POST) {
 	$type = $type[count($type)-1];		
 	$imgName = uniqid(rand()).'.'.$type;
 	$imageLocation = 'images/'.$imgName;
-	
+	if(in_array($type, array('gif', 'jpg', 'jpeg', 'png', 'JPG', 'GIF', 'JPEG', 'PNG'))) {
+		if(is_uploaded_file($_FILES['productImage']['tmp_name'])) {			
+			if(move_uploaded_file($_FILES['productImage']['tmp_name'], $imageLocation)) {
+				
+				
+
+			}	else {
+				return false;
+			}		
+		}
 	}		
+
+	
 }
