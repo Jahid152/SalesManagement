@@ -10,8 +10,10 @@ if($_POST) {
  	$quantity= $_POST['quantity'];	
 	$productStatus 	= $_POST['productStatus'];
 
+	$type = explode('.', $_FILES['productImage']['name']);
+	$type = $type[count($type)-1];		
+	$imgName = uniqid(rand()).'.'.$type;
+	$imageLocation = 'images/'.$imgName;
 	
 	}		
-
-	
 }
