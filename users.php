@@ -219,6 +219,28 @@ require_once 'header.php';
 				    </div>	      	     
 		    	</div>
 		    </form>
+			<script>
+				$(document).ready(function (e) {
+					$("#resetPassForm").on('submit',(function(e) {
+						e.preventDefault();
+						$.ajax({
+				        	url: "resetPass.php",
+							type: "POST",
+							data:  new FormData(this),
+							contentType: false,
+				    	    cache: false,
+							processData:false,
+							success: function(data) {
+								document.getElementById("successMessage2").innerHTML = "";					            
+					            var successMsg2 = "Password reset successfully";						           
+					            $('#successMessage2').append('<span style="padding: 10px; font-weight: bold; color: green;">'+ successMsg2 + '</span>');
+						    },error: function() {
+							} 	        
+					   });
+					}));
+				});
+
+			</script>  
 		</div>
 	</div>
 <?php
