@@ -109,7 +109,7 @@ require_once 'header.php';
 			            $('#manageProductTable').append(
 
 			            	'<tr>' + '<td><img src="images/' + productImage + '" width="50" height="50"></td> <td>' + productId + '</td><td>'+ productName + '</td><td>'
-			            	+ productQuantity + '</td><td>' + productPrice + '</td><td>' + productStatus + '</td>' + '</tr>'
+			            	+ productQuantity + '</td><td>' + productPrice + '</td><td>' + productStatus + '</td><td><button type="button" class="btn btn-default" id="' + productId + '" onclick="delProductData(' + productId + ')">Delete</button></td>' + '</tr>'
 
 			            	);
 			        });
@@ -208,6 +208,11 @@ require_once 'header.php';
 					   });
 					}));
 				});
+			</script>
+			<script>
+				function delProductData(prodid){
+					
+				}
 			</script>
 		</div>
 	</div>
