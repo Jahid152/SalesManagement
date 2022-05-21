@@ -172,3 +172,57 @@ require_once 'header.php';
 					});
 				}
 			</script>
+		</div>
+	</div>
+	<!-- Reset password -->
+	<div class="modal fade" id="resetPassModal" tabindex="-1" role="dialog">
+		<div class="modal-dialog">
+
+			<form action="resetPass.php" id="resetPassForm" method="POST"  enctype="multipart/form-data">
+				<div class="modal-content" id="successMessage2">
+
+			    <div class="modal-content">	    
+		    		<div class="modal-header">
+		    			<h5 class="title"><i class="fa fa-plus"></i> Reset/Update Password</h5>
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			      	</div>
+
+				    <div class="modal-body" style="max-height:450px; overflow:auto;">
+				      	<div id="add-Categories-messages"></div>
+
+				        <div class="form-group">
+				        	<label for="userName" class="col-sm-4 control-label">Username</label>
+							    <div class="col-sm-8">
+							      <input type="text" class="form-control" id="userName" placeholder="Username" name="userName" autocomplete="off">
+							    </div>
+				        </div>
+				        <div class="form-group">
+				        	<label for="oldPassword" class="col-sm-4 control-label">Old Password</label>
+							    <div class="col-sm-8">
+							      <input type="text" class="form-control" id="oldPassword" placeholder="Old Password" name="oldPassword" autocomplete="off">
+							    </div>
+				        </div>
+				        <div class="form-group">
+				        	<label for="newPassword" class="col-sm-4 control-label">New Password</label>
+							    <div class="col-sm-8">
+							      <input type="text" class="form-control" id="newPassword" placeholder="New Password" name="newPassword" autocomplete="off">
+							    </div>
+				        </div>
+				     </div> <!-- /modal-body -->
+			      
+			    	<div class="modal-footer">
+				        <button type="button" class="btn btn-default" data-dismiss="modal"> Close</button>
+				        
+				        <button type="submit" class="btn btn-primary" id="resetPassBtn" data-loading-text="Loading..." autocomplete="off">
+				         Save 
+				    	</button>
+				    </div>	      	     
+		    	</div>
+		    </form>
+		</div>
+	</div>
+<?php
+require_once 'footer.php';
+?>
+</body>
+</html>
