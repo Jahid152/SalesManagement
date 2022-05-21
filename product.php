@@ -226,6 +226,7 @@ require_once 'header.php';
 								document.getElementById("successMessage").innerHTML = "";					            
 					            var successMsg = "Product Deleted Successfully. Page will reload.";						           
 					            alert(successMsg);
+					            location.reload();
 						    }	        
 						});
 						return false;
