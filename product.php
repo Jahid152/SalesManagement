@@ -25,7 +25,6 @@ require_once 'header.php';
 						    <button class="btn btn-outline-success my-2 my-sm-0" id="productSearchBtn" onclick="searchByNameLoad()">Search</button>
 						</div>
 					</div>
-
 					<!-- Product search query by Ajax -->
 
 					<script>
