@@ -11,7 +11,7 @@ if($_POST) {
 
 	if($connect->query($sql) === TRUE) {
 		$valid['success'] = true;
-		$valid['messages'] = "Product Deleted Successfully";	
+		$valid['messages'] = "Product Deleted Successfully. Page will reload.";	
 	} else {
 		$valid['success'] = false;
 		$valid['messages'] = "Error";
