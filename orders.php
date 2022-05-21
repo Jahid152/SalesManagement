@@ -137,6 +137,8 @@ require_once 'header.php';
 			</script>  
 		</div>
 	</div>
-
+<?php
+require_once 'footer.php';
+?>
 </body>
 </html>
