@@ -112,10 +112,31 @@ require_once 'header.php';
 			        </div>
 			    </div>
 			</form>
-			
+			<script>
+				$(document).ready(function (e) {
+					$("#addOrderForm").on('submit',(function(e) {
+						e.preventDefault();
+						$.ajax({
+				        	url: "addOrder.php",
+							type: "POST",
+							data:  new FormData(this),
+							contentType: false,
+				    	    cache: false,
+							processData:false,
+							success: function(data) {
+								document.getElementById("successMessage").innerHTML = "";					            
+					            var successMsg = "Successfully Added";						           
+					            $('#successMessage').append('<span style="padding: 10px; font-weight: bold; color: green;">'+ successMsg + '</span>');
+						    },error: function() {
+
+							} 	        
+					   });
+					}));
+				});
+
+			</script>  
 		</div>
 	</div>
-</div>
 
 </body>
 </html>
