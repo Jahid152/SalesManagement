@@ -34,7 +34,7 @@ if($_POST){
 				$user_id = $value['salesman_id'];
 				$_SESSION['userId'] = $user_id;
 
-				header('location:'.$store_url.'dashboard.php');	
+				header('location: dashboard.php');	
 			} else{
 				
 				$errors[] = "Incorrect username/password combination";
@@ -109,7 +109,7 @@ if($_POST){
 					</div>
 					<div class="form-group row">
 					    <div class="col-sm-10">
-					    	<button type="submit" class="btn btn-primary">Sign in</button>
+					    	<button type="submit" class="btn btn-primary" id="btnSubmit">Sign in</button>
 					    </div>
 					</div>
 				</form>
