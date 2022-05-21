@@ -1,6 +1,7 @@
 <?php
 require_once 'header.php';
 ?>
+
 	<div class="row">
 		<div class="col-md-12">
 
@@ -17,18 +18,14 @@ require_once 'header.php';
 							<i class="fa fa-plus"></i> Add Product
 						</button>
 					</div>	
-		
+			
+					
 					<div class="div-action pull pull-right" style="padding:20px;">
 						<div class="form-inline">
 						    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="productSearchKey">
-
 						    <button class="btn btn-outline-success my-2 my-sm-0" id="productSearchBtn" onclick="searchByNameLoad()">Search</button>
 						</div>
 					</div>
-						    <button class="btn btn-outline-success my-2 my-sm-0" onclick="searchByNameLoad()">Search</button>
-						</div>
-					</div>
-
 					<!-- Product search query by Ajax -->
 
 					<script>
@@ -112,11 +109,7 @@ require_once 'header.php';
 			            $('#manageProductTable').append(
 
 			            	'<tr>' + '<td><img src="images/' + productImage + '" width="50" height="50"></td> <td>' + productId + '</td><td>'+ productName + '</td><td>'
-
 			            	+ productQuantity + '</td><td>' + productPrice + '</td><td>' + productStatus + '</td><td><button type="button" class="btn btn-default" id="' + productId + '" onclick="delProductData(' + productId + ')">Delete</button></td>' + '</tr>'
-
-			            	+ productQuantity + '</td><td>' + productPrice + '</td><td>' + productStatus + '</td>' + '</tr>'
-
 
 			            	);
 			        });
@@ -215,7 +208,6 @@ require_once 'header.php';
 					   });
 					}));
 				});
-
 			</script>
 			<script>
 				function delProductData(prodid){
@@ -241,10 +233,6 @@ require_once 'header.php';
 					});
 				}
 			</script>
-
-
-			</script>  
-
 		</div>
 	</div>
 </div>
