@@ -1,3 +1,7 @@
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
 CREATE TABLE `category` (
   `category_id` int(5) NOT NULL,
   `category_name` varchar(100) NOT NULL,
@@ -9,8 +13,7 @@ INSERT INTO `category` (`category_id`, `category_name`, `category_status`) VALUE
 (103, 'Car', 1),
 (104, 'Fruits', 1),
 (105, 'Vegetables', 1),
-(108, 'Motors', 1),
-(109, 'Bike', 1);
+(108, 'Motors', 1);
 
 CREATE TABLE `orders` (
   `order_id` int(12) NOT NULL,
@@ -22,11 +25,11 @@ CREATE TABLE `orders` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO `orders` (`order_id`, `product_id`, `order_date`, `order_total_price`, `product_order_qty`, `order_status`) VALUES
-(16, 218, '2021-01-26 15:29:07', 52.50, 5, 1),
-(17, 217, '2021-01-26 15:29:46', 250.00, 10, 1),
-(18, 219, '2021-01-26 17:00:58', 25.00, 5, 1),
-(19, 220, '2022-01-19 06:41:58', 1.50, 1, 1),
-(20, 218, '2022-01-26 09:15:02', 105.00, 10, 1);
+(16, 218, '2021-01-26 09:29:07', 52.50, 5, 1),
+(17, 217, '2021-01-26 09:29:46', 250.00, 10, 1),
+(18, 219, '2021-01-26 11:00:58', 25.00, 5, 1),
+(19, 220, '2022-01-19 00:41:58', 1.50, 1, 1),
+(20, 218, '2022-01-26 03:15:02', 105.00, 10, 1);
 
 CREATE TABLE `product` (
   `product_image` varchar(100) NOT NULL,
@@ -57,50 +60,24 @@ INSERT INTO `sales_manager` (`salesman_id`, `salesman_pass`, `salesman_name`, `s
 ('atik', '827ccb0eea8a706c4c34a16891f84e7b', 'Md. Atikul Haider', '01700000600', 'mpatowary183096@bscse.uiu.ac.bd'),
 ('jahid', '827ccb0eea8a706c4c34a16891f84e7b', 'Md. Jahidul Islam', '01700000600', 'mislam152212@bscse.uiu.ac.bd');
 
---
--- Indexes for table `category`
---
 ALTER TABLE `category`
   ADD PRIMARY KEY (`category_id`);
 
---
--- Indexes for table `orders`
---
 ALTER TABLE `orders`
   ADD PRIMARY KEY (`order_id`),
   ADD KEY `proID_FK` (`product_id`);
 
---
--- Indexes for table `product`
---
 ALTER TABLE `product`
   ADD PRIMARY KEY (`product_id`);
 
---
--- Indexes for table `sales_manager`
---
 ALTER TABLE `sales_manager`
   ADD PRIMARY KEY (`salesman_id`);
 
---
--- AUTO_INCREMENT for table `category`
---
 ALTER TABLE `category`
-  MODIFY `category_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=111;
+  MODIFY `category_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=112;
 
---
--- AUTO_INCREMENT for table `orders`
---
 ALTER TABLE `orders`
   MODIFY `order_id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
---
--- AUTO_INCREMENT for table `product`
---
 ALTER TABLE `product`
-  MODIFY `product_id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=223;
-COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+  MODIFY `product_id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=224;
