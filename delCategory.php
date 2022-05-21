@@ -17,4 +17,7 @@ if($_POST) {
 		$valid['messages'] = "Error";
 	}
 
+	$connect->close();
+
+	echo json_encode($valid);
 }
