@@ -9,5 +9,8 @@ if($_POST) {
 
 	$sql = "DELETE FROM category WHERE category_id = $catid";
 
-
+	if($connect->query($sql) === TRUE) {
+		$valid['success'] = true;
+		$valid['messages'] = "Category Deleted Successfully. Page will reload.";	
+	}
 }
