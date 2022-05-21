@@ -211,7 +211,25 @@ require_once 'header.php';
 			</script>
 			<script>
 				function delProductData(prodid){
-					
+					$(document).ready(function (e) {
+
+						var formData = {
+							'productid': prodid
+						};
+
+						$.ajax({
+				        	url: "delProductData.php",
+							type: "POST",
+							data: formData,
+							dataType: 'json',
+							success: function(data) {
+								document.getElementById("successMessage").innerHTML = "";					            
+					            var successMsg = "Product Deleted Successfully. Page will reload.";						           
+					            alert(successMsg);
+						    }	        
+						});
+						return false;
+					});
 				}
 			</script>
 		</div>
