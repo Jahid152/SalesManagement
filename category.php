@@ -102,7 +102,32 @@ require_once 'header.php';
 	</div>
 </div> 
 
-
+<script>
+		$(document).ready(function(){
+		    $.ajax({
+		        type: 'GET',
+		        url: 'getCategoryData.php',
+		        dataType: 'json',
+		        success: function(data) {
+		        	$.each(data, function(key, items) {
+			            var categoryId = items.category_id;
+			            var categoryName = items.category_name;
+			            var categoryStatus;
+			            if( items.category_status == 1)
+			            	categoryStatus = "Available";
+			            else
+			            	categoryStatus = "Not Available";
+			            // var productStatus = items.product_status;
+			            $('#manageCategoriesTable').append(
+			            	'<tr>' + '<td>' + categoryId + '</td><td>'+ categoryName + '</td><td>' + categoryStatus + '</td><td><button type="button" class="btn btn-default" onclick="delCategory(' + categoryId + ')">Delete</button></td></tr>'
+			            );
+			        });
+		        }
+		    });
+		    return false;
+		});
+	</script>
+	
 </div>
 <?php
 require_once 'footer.php';
