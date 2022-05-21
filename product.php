@@ -214,7 +214,7 @@ require_once 'header.php';
 					$(document).ready(function (e) {
 
 						var formData = {
-							'productid': prodid
+							'prodid': prodid
 						};
 
 						$.ajax({
