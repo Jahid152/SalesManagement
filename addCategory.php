@@ -11,6 +11,10 @@ if($_POST) {
 	$sql = "INSERT INTO category (category_name, category_status) 
 			VALUES ('$categoriesName', '$categoriesStatus')";
 
+	if($connect->query($sql) === TRUE) {
+		$valid['success'] = true;
+		$valid['messages'] = "Successfully Added";	
+	} 
 
 	echo json_encode($valid);
 }
