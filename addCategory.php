@@ -8,5 +8,9 @@ if($_POST) {
 	$categoriesName = $_POST['categoriesName'];
 	$categoriesStatus = $_POST['categoriesStatus'];
 
+	$sql = "INSERT INTO category (category_name, category_status) 
+			VALUES ('$categoriesName', '$categoriesStatus')";
+
+
 	echo json_encode($valid);
 }
