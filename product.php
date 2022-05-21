@@ -18,6 +18,7 @@ require_once 'header.php';
 							<i class="fa fa-plus"></i> Add Product
 						</button>
 					</div>	
+			
 					
 					<div class="div-action pull pull-right" style="padding:20px;">
 						<div class="form-inline">
