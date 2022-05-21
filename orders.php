@@ -73,4 +73,49 @@ require_once 'header.php';
 		});
 	</script>
 
-	
+	<!-- Adding Order -->
+
+	<div class="modal fade" id="addProductModal" tabindex="-1" role="dialog">
+		<div class="modal-dialog">
+
+			<form action="addOrder.php" id="addOrderForm" method="POST"  enctype="multipart/form-data">
+
+			    <div class="modal-content" id="successMessage">
+			    
+		    		<div class="modal-header">
+		    			<h5 class="title"><i class="fa fa-plus"></i> Add Order</h5>
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			      	</div>
+
+				    <div class="modal-body" style="max-height:450px; overflow:auto;">
+				      	<div id="add-product-messages"></div>
+
+				        <div class="form-group">
+				        	<label for="quantity" class="col-sm-3 control-label" style="max-width: 50%;">Product ID </label>
+							    <div class="col-sm-8">
+							      <input type="int" class="form-control" id="productId" placeholder="Product ID" name="productId" autocomplete="off" required>
+							    </div>
+				        </div>
+
+				        <div class="form-group">
+				        	<label for="quantity" class="col-sm-3 control-label" style="max-width: 50%;">Quantity </label>
+							    <div class="col-sm-8">
+							      <input type="int" class="form-control" id="quantity" placeholder="Quantity" name="quantity" autocomplete="off" required>
+							    </div>
+				        </div>
+				    </div>
+				      
+			        <div class="modal-footer">
+				        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				        
+				        <button type="submit" class="btn btn-primary" id="createProductBtn" data-loading-text="Loading..." autocomplete="off">Save</button>
+			        </div>
+			    </div>
+			</form>
+			
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
