@@ -127,7 +127,30 @@ require_once 'header.php';
 		    return false;
 		});
 	</script>
-	
+	<script>
+		function delCategory(catid){
+			$(document).ready(function (e) {
+
+				var formData = {
+					'catid': catid
+				};
+
+				$.ajax({
+		        	url: "delCategory.php",
+					type: "POST",
+					data: formData,
+					dataType: 'json',
+					success: function(data) {
+						document.getElementById("successMessage").innerHTML = "";					            
+			            var successMsg = "Category Deleted Successfully. Page will reload.";						           
+			            alert(successMsg);
+			            location.reload();
+				    }	        
+				});
+				return false;
+			});
+		}
+	</script>
 </div>
 <?php
 require_once 'footer.php';
