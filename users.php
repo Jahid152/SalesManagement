@@ -148,6 +148,29 @@ require_once 'header.php';
 					}));
 				});
 			</script>
+			<script>
+				function delUser(user){
+					$(document).ready(function (e) {
+
+						var formData = {
+							'userid': user
+						};
+
+						$.ajax({
+				        	url: "delUser.php",
+							type: "POST",
+							data: formData,
+							dataType: 'json',
+							success: function(data) {
+								document.getElementById("successMessage").innerHTML = "";					            
+					            var successMsg = "User Deleted Successfully. Page will reload.";						           
+					            alert(successMsg);
+						    }	        
+						});
+						return false;
+					});
+				}
+			</script>
 <?php
 require_once 'footer.php';
 ?>
