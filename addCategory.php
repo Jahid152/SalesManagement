@@ -14,7 +14,12 @@ if($_POST) {
 	if($connect->query($sql) === TRUE) {
 		$valid['success'] = true;
 		$valid['messages'] = "Successfully Added";	
-	} 
+	} else {
+		$valid['success'] = false;
+		$valid['messages'] = "Error";
+	}
+
+	$connect->close();
 
 	echo json_encode($valid);
 }
