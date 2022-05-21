@@ -16,6 +16,12 @@ require_once 'header.php';
 						<button class="btn btn-default button1" data-toggle="modal" id="addProductModalBtn" data-target="#addProductModal">
 							<i class="fa fa-plus"></i> Add User
 						</button>
+					</div>
+
+					<div class="div-action pull pull-left" style="padding:20px;">
+						<button class="btn btn-default button1" data-toggle="modal" id="resetPassModalBtn" data-target="#resetPassModal">
+							<i class="fa fa-plus"></i> Reset Password
+						</button>
 					</div>	
 					
 					<div class="div-action pull pull-right" style="padding:20px;">
@@ -31,6 +37,7 @@ require_once 'header.php';
 							<th>Name</th>
 							<th>Contact</th>							
 							<th>Email</th>
+							<th></th>
 						</tr>
 
 					</table>
@@ -52,7 +59,7 @@ require_once 'header.php';
 			            var contactNo = items.salesman_contact;
 			            var emailAddress = items.salesman_email;
 			            
-			            $('#manageProductTable').append('<tr>' + '<td>' + userName + '</td><td>'+ fullName + '</td><td>' + contactNo + '</td><td>' + emailAddress + '</td></tr>');
+			            $('#manageProductTable').append('<tr>' + '<td>' + userName + '</td><td>'+ fullName + '</td><td>' + contactNo + '</td><td>' + emailAddress + '</td><td><button type="button" class="btn btn-default" onclick="delUser(\'' + userName + '\')">Delete</button></td></tr>');
 			        });
 		        }
 		    });
@@ -60,9 +67,7 @@ require_once 'header.php';
 		});
 	</script>
 
-<!-- Adding product -->
-
-
+<!-- Adding users -->
 	<div class="modal fade" id="addProductModal" tabindex="-1" role="dialog">
 		<div class="modal-dialog">
 
@@ -138,15 +143,11 @@ require_once 'header.php';
 					            $('#successMessage').append('<span style="padding: 10px; font-weight: bold; color: green;">'+ successMsg + '</span>');
 						    },error: function() {
 
-							} 	        
+							}
 					   });
 					}));
 				});
-
-			</script>  
-		</div>
-	</div>
-</div>
+			</script>
 <?php
 require_once 'footer.php';
 ?>
