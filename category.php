@@ -76,5 +76,36 @@ require_once 'header.php';
 			    </div>	      	     
 	    	</div>
 	    </form>
+		<script>
+			$(document).ready(function (e) {
+				$("#addCatForm").on('submit',(function(e) {
+					e.preventDefault();
+					$.ajax({
+			        	url: "addCategory.php",
+						type: "POST",
+						data:  new FormData(this),
+						contentType: false,
+			    	    cache: false,
+						processData:false,
+						success: function(data) {
+							document.getElementById("successMessage").innerHTML = "";					            
+				            var successMsg = "Successfully Added";						           
+				            $('#successMessage').append('<span style="padding: 10px; font-weight: bold; color: green;">'+ successMsg + '</span>');
+					    },error: function() {
+
+						} 	        
+				   });
+				}));
+			});
+
+		</script>  
+	</div>
+</div> 
+
+
+</div>
+<?php
+require_once 'footer.php';
+?>
 </body>
 </html>
