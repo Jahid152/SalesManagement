@@ -42,3 +42,35 @@ require_once 'header.php';
 		</div>
 	</div>
 
+	<script>
+		$(document).ready(function(){
+		    $.ajax({
+		        type: 'GET',
+		        url: 'getOrderData.php',
+		        dataType: 'json',
+		        success: function(data) {
+		        	$.each(data, function(key, items) {
+			            var productImage = items.product_image;
+			            var orderId = items.order_id;
+			            var productName = items.product_name;
+			            var orderQuantity = items.product_order_qty;
+			            var orderTotal = items.order_total_price;
+			            var orderStatus;
+			            if( items.order_status == 1)
+			            	orderStatus = "Paid";
+			            else
+			            	orderStatus = "Due";
+			            $('#manageProductTable').append(
+
+			            	'<tr>' + '<td><img src="images/' + productImage + '" width="50" height="50"></td> <td>' + orderId + '</td><td>'+ productName + '</td><td>'
+			            	+ orderQuantity + '</td><td>' + orderTotal + '</td><td>' + orderStatus + '</td>' + '</tr>'
+
+			            	);
+			        });
+		        }
+		    });
+		    return false;
+		});
+	</script>
+
+	
