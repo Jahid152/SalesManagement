@@ -12,5 +12,9 @@ if($_POST) {
 	if($connect->query($sql) === TRUE) {
 		$valid['success'] = true;
 		$valid['messages'] = "Category Deleted Successfully. Page will reload.";	
+	} else {
+		$valid['success'] = false;
+		$valid['messages'] = "Error";
 	}
+
 }
